@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NJS Construction</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #555;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+        }
+
+        nav a:hover {
+            background-color: #444;
+        }
+
+        /* Header */
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        /* Contact details in header */
+        .contact-details {
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        .contact-details a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .contact-details a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .hero {
+            background: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1200') center/cover no-repeat;
+            height: 300px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .services, .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 1px;
+            margin: 10px;
+            padding: 10px;
+            width: 250px;
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;  /* Adjust height automatically to maintain aspect ratio */
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .gallery img {
+            margin: 10px;
+            max-width: 500px;
+            height: 300px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        /* Language toggle button */
+        .language-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #444;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .language-toggle:hover {
+            background-color: #333;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .card {
+                width: 90%;
+            }
+
+            .gallery img {
+                max-width: 100%;
+            }
+
+            /* Adjust navigation bar to vertical layout on mobile */
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                padding: 15px;
+                width: 100%; /* Make links take full width */
+                text-align: center;
+                border-top: 1px solid #444;
+            }
+
+            nav a:first-child {
+                border-top: none; /* Remove the top border from the first link */
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="language-toggle" id="langToggle">தமிழ்</button>
+    
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#home" id="navHome">Home</a>
+        <a href="#about" id="navAbout">About Us</a>
+        <a href="#services" id="navServices">Services</a>
+        <a href="#gallery" id="navGallery">Gallery</a>
+        <a href="#contact" id="navContact">Contact</a>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1 id="heading">Welcome to NJS Construction</h1>
+        <p id="slogan">Building your Dreams with Excellence</p>
+        <div class="contact-details">
+            <span id="name">Name: J. Chinna</span>
+            <a href="tel:+1234567890" id="Call">Call: 9789954446</a> |
+            <a href="mailto:contact@njsconstruction.com" id="email">Email: j.chinnapaul@gmail.com</a>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <h2 id="heroText">Delivering Quality Construction, On Time, Since 2000</h2>
+    </section>
+    <section id="about">
+        <h2 id="aboutTitle">About Us</h2>
+        <p id="aboutText">At NJS Construction, we are passionate about creating structures that endure and inspire. With a team of skilled professionals, we offer exceptional quality in residential, commercial, and renovation services. Our commitment to excellence and timely project completion has earned us a trusted reputation in the industry. From the initial consultation to the final touches, we take pride in every step of the building process, ensuring our clients' dreams come to life with precision and care.</p>
+        <p id="achievements">We have successfully completed over 120 buildings of various types, delivering excellence in every project. Our clients' positive feedback inspires us to continue striving for perfection and makes us feel proud of the trust they place in us.</p>
+    </section>
+
+    <section id="services">
+        <h2 id="servicesTitle">Our Services</h2>
+        <div class="services">
+            <div class="card">
+                <img src="images\Commercial Projects.jpg" alt="Residential Construction">
+                <h3 id="residentialTitle">Residential Construction</h3>
+                <p id="residentialText">We build homes that stand the test of time, combining style and durability.</p>
+            </div>
+            <div class="card">
+                <img src="images\Residential Construction.jpg" alt="Commercial Projects">
+                <h3 id="commercialTitle">Commercial Projects</h3>
+                <p id="commercialText">From offices to shopping complexes, we deliver on all your commercial needs.</p>
+            </div>
+            <div class="card">
+                <img src="images\Renovations.jpg" alt="Renovations">
+                <h3 id="renovationTitle">Renovations</h3>
+                <p id="renovationText">Transform your existing space into something extraordinary with our expert renovation services.</p>
+            </div>
+        </div>
+    </section>
+    <section id="gallery">
+        <h2 id="galleryTitle">Our Gallery</h2>
+        <div class="gallery">
+            <img src="images/build_2.jpg" alt="Project 1">
+            <img src="images/build_4.jpg" alt="Project 2">
+            <img src="images/build_3.jpg" alt="Project 3">
+            <img src="images/build_1.jpg" alt="Project 4">
+            <img src="images/build_5.jpg" alt="Project 5">
+            <img src="images/build_6.jpg" alt="Project 6">
+            <img src="images/inter_1.jpg" alt="Project 6">
+            <img src="images/inter_2.jpg" alt="Project 6">
+            <img src="images/inter_3.jpg" alt="Project 6">
+            <img src="images/inter_4.jpg" alt="Project 6">
+            <img src="images/inter_5.jpg" alt="Project 6">
+        </div>
+    </section>
+    <section id="contact">
+        <h2 id="contactTitle">Contact Us</h2>
+        <p id="contactText">Have a project in mind? Reach out to us:</p>
+        <p id="contactEmail">Email: j.chinnapaul@gmail.com</p>
+        <p id="contactPhone">Phone: 9789954446</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 NJS Construction. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("langToggle").addEventListener("click", function() {
+            const isTamil = this.textContent === "தமிழ்";
+            if (isTamil) {
+                document.getElementById("heading").textContent = "NJS கட்டிடவியல் வரவேற்கின்றேன்";
+                document.getElementById("slogan").textContent = "உங்கள் கனவுகளை சிறப்புடன் கட்டியமைத்து";
+                document.getElementById("aboutTitle").textContent = "எங்களைப் பற்றி";
+                document.getElementById("aboutText").textContent = "NJS கட்டிடவியல், பௌதிகமாகவும் அழகியதாகவும் நிலைத்திருக்கும் கட்டுமானங்களை உருவாக்க ஆர்வமுள்ளவர்கள். நாங்கள் மகிழ்ச்சியான மற்றும் சிறந்த நிர்வாகத்துடன் குடும்ப, வணிக மற்றும் மறுசீரமைப்புப் பணிகளை வழங்குகிறோம்.";
+                document.getElementById("achievements").textContent = "நாங்கள் வெற்றிகரமாக 120 க்கும் மேற்பட்ட வகையான கட்டிடங்களை கட்டியுள்ளோம், ஒவ்வொரு திட்டத்திலும் சிறப்புகளை வழங்குகிறோம். எங்கள் வாடிக்கையாளர்களின் நேர்மையான பின்னூட்டம் எங்களை மேலும் சிறப்பாக செயல்படத் தூண்டுகிறது மற்றும் எங்கள் மேல் வைத்துள்ள நம்பிக்கைக்கு பெருமை கொள்கிறோம்.";
+                document.getElementById("residentialTitle").textContent = "வாழிட கட்டுமானம்";
+                document.getElementById("residentialText").textContent = "நாங்கள் நேர்த்தியான மற்றும் வலுவான வீட்டுகளைக் கட்டுகிறோம்.";
+                document.getElementById("commercialTitle").textContent = "வணிகப் பணி";
+                document.getElementById("commercialText").textContent = "நாங்கள் அனைத்து வணிகத் தேவைகளையும் நிறைவேற்றுகிறோம்.";
+                document.getElementById("renovationTitle").textContent = "மறுசீரமைப்பு";
+                document.getElementById("renovationText").textContent = "உங்கள் இடத்தை வல்லுநர் மறுசீரமைப்பு சேவைகளுடன் மாற்றுங்கள்.";
+                document.getElementById("galleryTitle").textContent = "எங்களது படக்கலக்";
+                document.getElementById("contactTitle").textContent = "தொடர்புகொள்வது";
+                document.getElementById("contactText").textContent = "ஒரு திட்டம் உள்ளதா? எங்களை தொடர்புகொள்ளவும்:";
+                document.getElementById("contactEmail").textContent = "மின்னஞ்சல்: j.chinnapaul@gmail.com";
+                document.getElementById("contactPhone").textContent = "தொலைபேசி: 9789954446";
+                this.textContent = "English";
+            } else {
+                location.reload(); // Refresh the page to revert to English
+            }
+        });
+    </script>
+</body>
+</html>
